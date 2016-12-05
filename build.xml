@@ -74,6 +74,6 @@
         <taskdef name="stop" classname="org.apache.catalina.ant.StopTask"/>
         <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask"/>
     
-        <deploy url="http://172.16.205.132/manager/text" username="admin" password="admin" path="/Conexiones" war="dist\Conexiones.war" update="true"/>
+        <deploy url="http://172.16.205.157/manager/text" username="admin" password="admin" path="/Conexiones" war="dist\Conexiones.war" update="true"/>
     </target>
 </project>
