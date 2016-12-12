@@ -77,7 +77,7 @@
     <property name="libs.CopyLibs.classpath" value="tools/ant/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="j2ee.server.home" value="tools/ant" />
     
-    <target name="desplegar" depends="">
+    <target name="desplegar" depends="dist">
         <deploy url="http://172.16.205.132/manager/text" username="admin" password="admin" path="/Conexiones" war="dist\Conexiones.war" update="true"/>
     </target>
 </project>
