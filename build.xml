@@ -68,12 +68,16 @@
     nbproject/build-impl.xml file. 
 
     -->
-    <target name="desplegar" depends="">
-        <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask"/>
-        <taskdef name="start" classname="org.apache.catalina.ant.StartTask"/>
-        <taskdef name="stop" classname="org.apache.catalina.ant.StopTask"/>
-        <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask"/>
     
+    <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask"/>
+    <taskdef name="start" classname="org.apache.catalina.ant.StartTask"/>
+    <taskdef name="stop" classname="org.apache.catalina.ant.StopTask"/>
+    <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask"/>
+    
+    <property name="libs.CopyLibs.classpath" value="tools/ant/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+    <property name="j2ee.server.home" value="tools/ant" />
+    
+    <target name="desplegar" depends="">
         <deploy url="http://172.16.205.132/manager/text" username="admin" password="admin" path="/Conexiones" war="dist\Conexiones.war" update="true"/>
     </target>
 </project>
