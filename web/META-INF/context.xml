@@ -7,7 +7,7 @@
       driverClassName="com.mysql.jdbc.Driver"
       url="jdbc:mysql://172.16.205.161:3306/spacex"
       username="root"
-      password="admin"
+      password="root"
    
       maxTotal="30"
       maxIdle="5"
