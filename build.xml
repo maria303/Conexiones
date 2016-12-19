@@ -81,9 +81,9 @@
         
     </target>
     
-    <target name="-base-datos-produccion" if="enableProduccion">
+    <target name="-base-datos-produccion" if="-enable-produccion">
         <delete file="./web/META-INF/context.xml"/>
-        <rename src="./web/META-INF/context_produccion.xml" dest="./web/META-INF/context.xml"/>
+        <move file="./web/META-INF/context_produccion.xml" tofile="./web/META-INF/context.xml"/>
     </target>
     
     <target name="desplegar" depends="-preparar-produccion, dist">
@@ -91,6 +91,6 @@
     </target>
     
     <target name="-preparar-produccion">
-        <property name="enableProduccion" value="true"></property>
+        <property name="-enable-produccion" value="true"></property>
     </target>
 </project>
