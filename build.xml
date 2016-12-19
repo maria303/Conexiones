@@ -77,7 +77,11 @@
     <property name="libs.CopyLibs.classpath" value="tools/ant/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="j2ee.server.home" value="tools/ant" />
     
-    <target name="-pre-dist" if="enableProduccion">
+    <target name="-pre-dist" depends="-base-datos-produccion">
+        
+    </target>
+    
+    <target name="-base-datos-produccion" if="enableProduccion">
         <delete file="./web/META-INF/context.xml"/>
         <rename src="./web/META-INF/context_produccion.xml" dest="./web/META-INF/context.xml"/>
     </target>
