@@ -77,7 +77,7 @@
     <property name="libs.CopyLibs.classpath" value="tools/ant/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="j2ee.server.home" value="tools/ant" />
     
-    <target name="-pre-dist" depends="-base-datos-produccion">
+    <target name="-pre-dist" depends="-base-datos-produccion, -pre-dist">
         
     </target>
     
