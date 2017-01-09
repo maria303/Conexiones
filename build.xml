@@ -77,6 +77,15 @@
     <property name="libs.CopyLibs.classpath" value="tools/ant/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="j2ee.server.home" value="tools/ant" />
     
+    
+    <target name="desplegar" depends="-preparar-produccion, dist">
+        <deploy url="http://172.16.205.132/manager/text" username="admin" password="admin" path="/Conexiones" war="./dist/Conexiones.war" update="true"/>
+    </target>
+    
+    <target name="-preparar-produccion">
+        <property name="-enable-produccion" value="true"></property>
+    </target>
+    
     <target name="-pre-dist" depends="-base-datos-produccion">
         
     </target>
@@ -86,11 +95,5 @@
         <move file="./web/META-INF/context_produccion.xml" tofile="./web/META-INF/context.xml"/>
     </target>
     
-    <target name="desplegar" depends="-preparar-produccion, dist">
-        <deploy url="http://172.16.205.132/manager/text" username="admin" password="admin" path="/Conexiones" war="./dist/Conexiones.war" update="true"/>
-    </target>
     
-    <target name="-preparar-produccion">
-        <property name="-enable-produccion" value="true"></property>
-    </target>
 </project>
