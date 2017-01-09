@@ -92,7 +92,7 @@
     
     <target name="-base-datos-produccion" if="-enable-produccion">
         <delete file="./build/web/META-INF/context.xml"/>
-        <move file="./build/web/META-INF/context_produccion.xml" tofile="./web/META-INF/context.xml"/>
+        <move file="./build/web/META-INF/context_produccion.xml" tofile="./build/web/META-INF/context.xml"/>
     </target>
     
     
