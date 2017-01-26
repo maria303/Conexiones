@@ -79,7 +79,7 @@
     
     
     <target name="desplegar" depends="-preparar-produccion, dist">
-        <deploy url="http://172.16.205.132/manager/text" username="admin" password="admin" path="/Conexiones" war="./dist/Conexiones.war" update="true"/>
+        <deploy url="http://172.16.205.180/manager/text" username="admin" password="admin" path="/Conexiones" war="./dist/Conexiones.war" update="true"/>
     </target>
     
     <target name="-preparar-produccion">
